@@ -2,7 +2,13 @@
 """
 Test oxo7 - Rotate 2D Matrix
 """
+
+
 def rotate_2d_matrix(matrix: [[int]]) -> [[int]]:
+    """
+    GIVEN an n xn 2d matrix,
+    rotate it 90 degrees clockwise.
+    """
     size = len(matrix)
     layer_count = int(size / 2)
 
