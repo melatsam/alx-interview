@@ -5,14 +5,13 @@ Grid cells are connected horizontally/vertically
 
 
 def island_perimeter(grid):
-    m, n = len(grid), len(grid[0])
-    land, nei = 0, 0
-    for i in range(m):
-        for j in range(n):
+    perimeter = 0
+    for i in range(len(grid)):
+        for j in range(len(grid[i])):
             if grid[i][j] == 1:
-                land += 1
-                if i < m-1 and grid[i+1][j] == 1:
-                    nei += 1
-                    if j < n-1 and grid[i][j+1] == 1:
-                        nei += 1
-                        return land*4-2*nei
+                perimeter += 4
+                if i > 0 and grid[i-1][j] == 1:
+                    perimeter -= 2
+                if j > 0 and grid[i][j-1] == 1:
+                    perimeter -= 2
+    return perimeter
