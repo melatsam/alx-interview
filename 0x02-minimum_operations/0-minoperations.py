@@ -1,18 +1,15 @@
 #!/usr/bin/python3
 """
-calculate the fewest number of operations needed to
-result in exactly n H charater in the file.
+IF n is impossible to achieve,return 0
 """
 
-def minOperation(n):
-    """ 
-    returns an interger
+
+def minOperations(n):
     """
-
-    n = 4
-    print("Min # of operations to reach {} char: {}".format(n, minOperations(n)))
-
-    n = 12
-    print("Min # of operations to reach {} char: {}".format(n, minOperations(n)))
-    return 0
-    
+    RETURNS an integer
+    """
+    if n <= 1:
+        return 0
+    for i in range(2, n + 1):
+        if n % i == 0:
+            return minOperations(int(n / i)) + i
