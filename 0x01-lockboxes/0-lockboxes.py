@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-""" 
-boxs is a list of lists
+"""
+Boxs is a list of lists
 """
 
 
