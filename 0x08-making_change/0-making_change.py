@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"""
-coins is list of the values of the coins in your possession
-"""
+''' fewest number of the coin '''
 
 
 def makeChange(coins, total):
